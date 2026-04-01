@@ -1,10 +1,13 @@
-import { StyledLink, Ul } from "./Navbar.styled.tsx";
+import { ListElement } from "../../../components/ui/ListElement";
+import { NavList, StyledLink } from "./Navbar.styled";
 
 export function Navbar() {
     return (
-        <Ul>
-            <li><StyledLink to="/">Home</StyledLink></li>
-            <li><StyledLink to="/todos">Todos</StyledLink></li>
-        </Ul>
+        <NavList direction="row">
+            <ListElement><StyledLink to="/" title="Home">Home</StyledLink></ListElement>
+            <ListElement><StyledLink to="/todos/dashboard" title="Todos">Todos</StyledLink></ListElement>
+            <ListElement><StyledLink to="/todos/list" title="List">List</StyledLink></ListElement>
+            <ListElement><StyledLink to="/todos/board" title="Board">Board</StyledLink></ListElement>
+        </NavList>
     );
 }

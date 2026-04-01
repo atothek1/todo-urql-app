@@ -2,7 +2,7 @@ import { useQuery } from "urql";
 
 import type { CursorPaginationVars } from "../../../types";
 import { sanitizePaginationResponse } from "../../../utils/graphql/sanitizePaginationResponse";
-import type { TodoDto } from "../types.ts";
+import type { TodoDto } from "../types";
 import { readTodosQuery } from "./queries";
 
 export function useReadTodosQuery( variables: CursorPaginationVars = { first: 10 } ) {
