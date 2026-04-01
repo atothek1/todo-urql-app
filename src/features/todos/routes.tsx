@@ -6,5 +6,7 @@ export const TodoRoutes = [ {
     path: "/todos/list",
     element: <TodoPage view="list" /> }, {
     path: "/todos/board",
-    element: <TodoPage view="board" />,
+    element: <TodoPage view="board" /> }, {
+    path: "/todos/new",
+    element: <TodoPage view="new" />,
 } ];

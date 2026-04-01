@@ -38,6 +38,7 @@ const styles = css`
         line-height: 1.5;
         /* 5. Improve text rendering */
         -webkit-font-smoothing: antialiased;
+        background-color: #dfdfdf;
     }
 
     /* 6. Improve media defaults */

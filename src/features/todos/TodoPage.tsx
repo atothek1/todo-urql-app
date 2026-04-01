@@ -18,25 +18,26 @@ function getView( view: string ) {
             title: "Todos Dashboard",
             element: <Dashboard />,
         };
+        case "new": return {
+            title: "Create New Todo",
+            element: <TodoForm />,
+        };
         default: return {
             title: "Invalid View",
-            element: ( <div>
-                Invalid view:
-                {view}
-                       </div> ),
+            element: ( <div>{`Invalid view:${ view }`}</div> ),
         };
     }
 }
 interface TodoPageProps {
-    readonly view: "list" | "board" | "dashboard"
+    readonly view: "list" | "board" | "dashboard" | "new"
 }
 export function TodoPage( props: TodoPageProps ) {
     const { view } = props;
     const { title, element } = getView( view );
+
     return (
         <Box direction="column" gap="20px">
             <h1>{title}</h1>
-            <TodoForm />
             {element}
         </Box>
     );
