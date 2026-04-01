@@ -6,6 +6,7 @@ interface BoxProps {
     readonly justifyContent?: React.CSSProperties[ "justifyContent" ]
     readonly justifyItems?: React.CSSProperties[ "justifyItems" ]
     readonly justifySelf?: React.CSSProperties[ "justifySelf" ]
+    readonly alignItems?: React.CSSProperties[ "alignItems" ]
     readonly flex?: React.CSSProperties[ "flex" ]
 }
 export const Box = styled.div<BoxProps>`
@@ -15,5 +16,6 @@ export const Box = styled.div<BoxProps>`
     justify-content: ${ props => props.justifyContent };
     justify-items: ${ props => props.justifyItems };
     justify-self: ${ props => props.justifySelf };
+    align-items: ${ props => props.alignItems };
     flex: ${ props => props.flex };
 `;

@@ -4,9 +4,9 @@ const styles = css`
     @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wdth,wght@0,75..100,100..900;1,75..100,100..900&display=swap');
 
     :root {
-        --todo-status-open-color: rgba(255, 233, 122, 0.59);
-        --todo-status-progress-color: rgba(78, 248, 255, 0.47);
-        --todo-status-done-color: rgba(159, 236, 45, 0.47);
+        --todo-status-open-color: #FFB785;
+        --todo-status-progress-color: #8DCDFF;
+        --todo-status-done-color: rgb(93, 202, 20);
 
         --error-color: rgb(255, 88, 88);
         --info-color: rgb(103, 156, 255);
@@ -38,6 +38,7 @@ const styles = css`
         line-height: 1.5;
         /* 5. Improve text rendering */
         -webkit-font-smoothing: antialiased;
+        background-color: #dfdfdf;
     }
 
     /* 6. Improve media defaults */

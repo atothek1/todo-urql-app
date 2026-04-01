@@ -1,17 +1,29 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router";
 
-export const Ul = styled.ul`
-    padding-left: 10px;
+import { List } from "../../../components/ui/List.tsx";
+
+export const NavList = styled( List )`
+    gap: 20px;
 `;
 
 export const StyledLink = styled( NavLink )`
-    text-decoration: underline;
+    font-size: 18px;
     cursor: pointer;
-    :hover {
+    :hover:not(.active) {
         font-weight: bold;
     }
     &.active {
         font-weight: bold;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #000;
+    }
+    :before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
     }
 `;
