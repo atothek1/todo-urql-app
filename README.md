@@ -1,4 +1,4 @@
-# screnshots
+# Screenshot
 
 List View
 ![List View](./docs/list-view.jpg)
