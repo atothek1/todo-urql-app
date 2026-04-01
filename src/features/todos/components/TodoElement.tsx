@@ -18,7 +18,7 @@ export function TodoElement( props: TodoElementProps ) {
     const { data: { id, text, status }, onSelected } = props;
 
     return (
-        <StyledTodoElement as="li" direction="row" bgColor={statusColors[ status ]}>
+        <StyledTodoElement as="li" direction="row">
             <input type="checkbox" onChange={() => onSelected( id )} />
             <div>
                 <span>
@@ -27,19 +27,32 @@ export function TodoElement( props: TodoElementProps ) {
                 </span>
                 <p>{text}</p>
             </div>
+            <TodoStatusPill bgColor={statusColors[ status ]}>{status}</TodoStatusPill>
             <TodoElementActions id={id} status={status} />
         </StyledTodoElement>
     );
 }
-
+interface TodoStatusPillProps {
+    readonly bgColor?: string
+}
+const TodoStatusPill = styled( Box )<TodoStatusPillProps>`
+    border-radius: 10px;
+    height: 22px;
+    padding: 0 10px;
+    max-width: fit-content;
+    font-size: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: ${ props => props.bgColor };
+`;
 interface ListElementProps {
     readonly bgColor?: string
 }
 const StyledTodoElement = styled( Box )<ListElementProps>`
     display: flex;
     gap: 10px;
-    align-items: center;
-    background-color: ${ props => props.bgColor };
+    border: 1px solid rgba(161, 161, 161, 0.16);
+    box-shadow: 0px 2px 7px 1px rgba(161, 161, 161, 0.16);
     padding: 10px;
     border-radius: 5px;
     & > div > span {
